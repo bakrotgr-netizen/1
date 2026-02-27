@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrintCraft — Конструктор печати фото</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">PrintCraft</a>
+        <nav class="main-nav">
+          <a href="#constructor">Конструктор</a>
+          <a href="#examples">Примеры работ</a>
+          <a href="#delivery">Доставка и оплата</a>
+          <a href="cart.html">Корзина</a>
+          <a href="account.html">Личный кабинет</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="constructor" class="hero">
+        <div class="container hero-grid">
+          <div>
+            <h1>Создайте печать фото на холсте, постере или постере в рамке</h1>
+            <p>
+              Загрузите свое фото, выберите материал, размер, кроп и ориентацию.
+              Сразу увидите макет и цену.
+            </p>
+          </div>
+          <form class="constructor-card" id="constructorForm">
+            <label>
+              Загрузить фото
+              <input type="file" id="photoInput" accept="image/*" />
+            </label>
+
+            <label>
+              Материал печати
+              <select id="materialSelect">
+                <option value="canvas">Холст</option>
+                <option value="poster">Постер</option>
+                <option value="framed">Постер в рамке</option>
+              </select>
+            </label>
+
+            <label>
+              Размер
+              <select id="sizeSelect">
+                <option value="30x40">30×40 см</option>
+                <option value="40x60">40×60 см</option>
+                <option value="50x70">50×70 см</option>
+              </select>
+            </label>
+
+            <label>
+              Кроп на макете
+              <select id="cropSelect">
+                <option value="fit">Вписать (без обрезки)</option>
+                <option value="fill">Заполнить (с обрезкой)</option>
+              </select>
+            </label>
+
+            <fieldset>
+              <legend>Ориентация</legend>
+              <label class="inline">
+                <input type="radio" name="orientation" value="portrait" checked />
+                Вертикальная
+              </label>
+              <label class="inline">
+                <input type="radio" name="orientation" value="landscape" />
+                Горизонтальная
+              </label>
+            </fieldset>
+
+            <div class="price-row">
+              <span>Стоимость</span>
+              <strong id="priceValue">2 490 ₽</strong>
+            </div>
+
+            <button type="button" class="btn-primary" id="addToCartBtn">
+              Добавить в корзину
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section class="container layout-section">
+        <h2>Макет</h2>
+        <div class="preview-wrapper" id="previewWrapper">
+          <img id="previewImage" alt="Предпросмотр загруженного фото" />
+          <p id="previewHint">Загрузите фото, чтобы увидеть макет.</p>
+        </div>
+      </section>
+
+      <section id="examples" class="container info-section">
+        <h2>Примеры работ</h2>
+        <div class="cards-grid">
+          <article class="info-card">
+            <h3>Холст в гостиную</h3>
+            <p>Глубокая печать на плотном холсте с натяжкой на подрамник.</p>
+          </article>
+          <article class="info-card">
+            <h3>Минималистичный постер</h3>
+            <p>Матовое покрытие и четкая детализация для стильного интерьера.</p>
+          </article>
+          <article class="info-card">
+            <h3>Постер в рамке</h3>
+            <p>Готовое решение для подарка и оформления любого пространства.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="delivery" class="container info-section">
+        <h2>Доставка и оплата</h2>
+        <div class="cards-grid">
+          <article class="info-card">
+            <h3>Доставка</h3>
+            <p>Курьером, пункт выдачи, или Почта РФ. Позже подключим плагины CDEK.</p>
+          </article>
+          <article class="info-card">
+            <h3>Оплата</h3>
+            <p>Оплата банковской картой, позже интеграция с Яндекс Пэй.</p>
+          </article>
+          <article class="info-card">
+            <h3>Сроки</h3>
+            <p>Печать от 1 дня, доставка по РФ — от 2 до 7 дней.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 PrintCraft</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
