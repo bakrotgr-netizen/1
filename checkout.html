@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оформление заказа — PrintCraft</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">PrintCraft</a>
+        <nav class="main-nav">
+          <a href="index.html#constructor">Конструктор</a>
+          <a href="index.html#examples">Примеры работ</a>
+          <a href="index.html#delivery">Доставка и оплата</a>
+          <a href="cart.html">Корзина</a>
+          <a href="account.html">Личный кабинет</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-section container">
+      <h1>Оформление заказа</h1>
+      <div class="checkout-grid">
+        <section class="checkout-card">
+          <h2>Данные заказчика</h2>
+          <label>ФИО <input type="text" placeholder="Иванов Иван Иванович" /></label>
+          <label>Телефон <input type="tel" placeholder="+7 (999) 000-00-00" /></label>
+          <label>Email <input type="email" placeholder="name@example.com" /></label>
+          <label>Комментарий к заказу <textarea rows="4" placeholder="Подъезд, этаж, код домофона..."></textarea></label>
+        </section>
+
+        <section class="checkout-card">
+          <h2>Доставка и оплата</h2>
+          <h3>Выбор доставки</h3>
+          <label class="inline"><input type="radio" name="delivery" checked /> Курьер по городу</label>
+          <label class="inline"><input type="radio" name="delivery" /> Пункт выдачи (будет CDEK)</label>
+          <label class="inline"><input type="radio" name="delivery" /> Почта РФ (плагин позже)</label>
+
+          <h3 style="margin-top: 1rem">Оплата товара</h3>
+          <label class="inline"><input type="radio" name="payment" checked /> Банковская карта</label>
+          <label class="inline"><input type="radio" name="payment" /> Яндекс Пэй (подключим позже)</label>
+
+          <button class="btn-primary" type="button">Подтвердить заказ</button>
+        </section>
+
+        <aside class="checkout-card summary">
+          <h2>Сводка заказа</h2>
+          <div id="summaryContent"></div>
+        </aside>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
